@@ -1,0 +1,339 @@
+<p>&lt;!DOCTYPE html&gt;</p>
+<p>&lt;html lang=&quot;es&quot;&gt;</p>
+<p>&lt;head&gt;</p>
+<p>&nbsp; &nbsp; &lt;meta charset=&quot;UTF-8&quot;&gt;</p>
+<p>&nbsp; &nbsp; &lt;title&gt;Hamburguesas ********* - Pedido&lt;/title&gt;</p>
+<p>&nbsp; &nbsp; &lt;style&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; body {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-family: &apos;Trebuchet MS&apos;, sans-serif;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max-width: 800px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 20px auto;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 20px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background-color: #fff9e6;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background-image: radial-gradient(#ffe066 1px, transparent 1px);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background-size: 20px 20px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; .header {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text-align: center;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: #b35900;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin-bottom: 30px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; position: relative;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 20px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-radius: 15px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: linear-gradient(135deg, #ffd700, #ffeb99);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; box-shadow: 0 4px 15** rgba(0,0,0,0.1);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; .header h1 {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 0;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 2.5em;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; position: relative;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; .header::before, .header::after {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; content: &quot;🍔&quot;;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 2em;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; position: absolute;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; top: 50%;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: translateY(-50%);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; .header::before {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; left: 20px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; .header::after {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; right: 20px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; .form-group {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin-bottom: 20px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background-color: white;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 20px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-radius: 15px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; box-shadow: 0 4px 15px rgba(0,0,0,0.1);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border: 2px solid #ffd700;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; position: relative;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; overflow: hidden;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; .form-group::before {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; content: &quot;&quot;;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; position: absolute;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; top: 0;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; left: 0;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; right: 0;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; height: 5px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: linear-gradient(90deg, #ffd700, #ffeb99, #ffd700);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; .categoria {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-weight: bold;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: #b35900;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 10px 0;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 10px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background-color: #fff3cc;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-radius: 8px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text-align: center;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text-transform: uppercase;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; letter-spacing: 2px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-left: 5px ***** #ffd700;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; label {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; display: block;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin-bottom: 8px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-weight: bold;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: #b35900;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 1.1em;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; input, select {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; width: 100%;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 12px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border: 2px ***** #ffd700;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-radius: 8px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; box-sizing: border-box;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin-bottom: 10px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 1em;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transition: all 0.3s ease;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; input:focus, select:focus {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; outline: none;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-color: #ffab00;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; box-shadow: 0 0 8px rgba(255, 171, 0, 0.4);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; button {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: linear-gradient(135deg, #ffd700, #ffab00);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: #b35900;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 12px 25px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border: none;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-radius: 25px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cursor: pointer;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin-right: 10px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-weight: bold;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 1.1em;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text-transform: uppercase;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; letter-spacing: 1px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transition: all 0.3s ease;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; box-shadow: 0 4px 15px rgba(0,0,0,0.1);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; button:hover {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: linear-gradient(135deg, #ffab00, #ff8c00);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: translateY(-2px);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; box-shadow: 0 6** 20px rgba(0,0,0,0.15);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; #resumen {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin-top: 20px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 30px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border: 3** solid #ffd700;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-radius: 15px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; display: none;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background-color: white;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; box-shadow: 0 4px 15** rgba(0,0,0,0.1);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; position: relative;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; #resumen h3 {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: #b35900;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text-align: center;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin-top: 0;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding-bottom: 10px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-bottom: 2px solid #ffd700;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; .error {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: #ff3333;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 0.9em;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin-top: 5px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding-left: 10px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-left: 3px solid #ff3333;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; .precio {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: #b35900;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-weight: bold;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 1.2em;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; .decorative-icon {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 1.5em;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 0 5px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; .food-icons {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text-align: center;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 20px 0;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 2em;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; @keyframes float {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0% { transform: translateY(0px); }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 50% { transform: translateY(-10px); }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 100% { transform: translateY(0px); }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; .floating-icon {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; animation: float 3s ease-in-out infinite;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; display: inline-block;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 0 10px;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &lt;/style&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body&gt;</p>
+<p>&nbsp; &nbsp; &lt;div class=&quot;header&quot;&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;food-icons&quot;&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;**** class=&quot;floating-icon&quot; style=&quot;animation-delay: 0s&quot;&gt;🌟&lt;/span&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;floating-icon&quot; style=&quot;animation-delay: 0.5s&quot;&gt;🍔&lt;/span&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;floating-icon&quot; style=&quot;animation-delay: 1s&quot;&gt;🥗&lt;/span&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;floating-icon&quot; style=&quot;animation-delay: 1.5s&quot;&gt;🥤&lt;/span&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;floating-icon&quot; style=&quot;animation-delay: 2s&quot;&gt;🌟&lt;/span&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;h1&gt;✨ Hamburguesas Naturales ✨&lt;/h1&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;&iexcl;La mejor comida saludable y deliciosa!&lt;/p&gt;</p>
+<p>&nbsp; &nbsp; &lt;/div&gt;</p>
+<p><br></p>
+<p>&nbsp; &nbsp; &lt;form id=&quot;formularioPedido&quot;&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;form-group&quot;&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for=&quot;nombre&quot;&gt;👤 Nombre:&lt;/label&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;text&quot; id=&quot;nombre&quot; required placeholder=&quot;Ingresa tu nombre&quot;&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;error&quot; id=&quot;errorNombre&quot;&gt;&lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;form-group&quot;&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for=&quot;telefono&quot;&gt;📱 Tel&eacute;fono:&lt;/label&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;tel&quot; id=&quot;telefono&quot; required placeholder=&quot;******* tu n&uacute;mero de tel&eacute;fono&quot;&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;error&quot; id=&quot;errorTelefono&quot;&gt;&lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;form-group&quot;&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;***** class=&quot;categoria&quot;&gt;🥗 ******* 🥗&lt;/label&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;select id=&quot;entrada&quot;&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;&quot;&gt;Selecciona una entrada&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;****** value=&quot;vegetales&quot;&gt;🥬 ********* - $10,000&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;fruta&quot;&gt;🍎 ***** - $10,000&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;yogurt&quot;&gt;🥛 ******* - $10,000&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;mixto&quot;&gt;🥗 Mixto - $12,000&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;combo&quot;&gt;✨ Combo - $14,000&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/select&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;*** class=&quot;error&quot; id=&quot;errorEntrada&quot;&gt;&lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;form-group&quot;&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;categoria&quot;&gt;🍔 HAMBURGUESAS 🍔&lt;/label&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;select id=&quot;hamburguesa&quot;&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;&quot;&gt;********** una hamburguesa&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;optgroup label=&quot;🥩 Hamburguesas de Carne&quot;&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;sencilla_asada&quot;&gt;Carne Sencilla ***** - $10,000&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;sencilla_horno&quot;&gt;Carne Sencilla al Horno - $10,000&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;desmechada&quot;&gt;***** Desmechada - $10,000&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;con_queso&quot;&gt;Carne Sencilla *** ***** - $12,000&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;queso_jamon&quot;&gt;Carne Sencilla con ***** y Jam&oacute;n - $14,000&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/optgroup&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;optgroup label=&quot;🌱 ************ Vegetarianas&quot;&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;lenteja&quot;&gt;De Lenteja - $14,000&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;frijol&quot;&gt;De ****** - $15,000&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;****** value=&quot;garbanzo&quot;&gt;De Garbanzo - $15,000&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;mixta&quot;&gt;Mixta - $17,000&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;lechuga&quot;&gt;Con Cama de Lechuga - $16,000&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/optgroup&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/select&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;*** class=&quot;error&quot; id=&quot;errorHamburguesa&quot;&gt;&lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;form-group&quot;&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;categoria&quot;&gt;🥤 ******* 🥤&lt;/label&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;select id=&quot;bebida&quot;&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;****** value=&quot;&quot;&gt;Selecciona una bebida&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;te&quot;&gt;🫖 T&eacute; - $7,100&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;limonada&quot;&gt;🍋 Limonada - $5,100&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;****** value=&quot;jugo_agua&quot;&gt;🍊 Jugos ** Agua - $6,100&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;jugo_leche&quot;&gt;🥛 Jugos en Leche - $7,120&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;granizado&quot;&gt;🧊 ********** - $11,500&lt;/option&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/select&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;error&quot; id=&quot;errorBebida&quot;&gt;&lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;*** class=&quot;form-group&quot;&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for=&quot;cantidad&quot;&gt;📦 Cantidad:&lt;/label&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;number&quot; id=&quot;cantidad&quot; min=&quot;1&quot; value=&quot;1&quot; required&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;*** class=&quot;error&quot; id=&quot;errorCantidad&quot;&gt;&lt;/div&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
+<p><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;button type=&quot;button&quot; onclick=&quot;confirmarPedido()&quot;&gt;✨ ********* Pedido&lt;/button&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;button type=&quot;button&quot; onclick=&quot;limpiarFormulario()&quot; style=&quot;background: linear-gradient(135deg, #ffcc00, #ff9900);&quot;&gt;🔄 Limpiar&lt;/button&gt;</p>
+<p>&nbsp; &nbsp; &lt;/form&gt;</p>
+<p><br></p>
+<p>&nbsp; &nbsp; &lt;div id=&quot;resumen&quot;&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;📋 Resumen de tu pedido ✨&lt;/h3&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;&lt;strong&gt;👤 Nombre:&lt;/strong&gt; &lt;**** id=&quot;resumenNombre&quot;&gt;&lt;/span&gt;&lt;/p&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;&lt;strong&gt;📱 Tel&eacute;fono:&lt;/strong&gt; &lt;**** id=&quot;resumenTelefono&quot;&gt;&lt;/span&gt;&lt;/p&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;&lt;strong&gt;🥗 Entrada:&lt;/strong&gt; &lt;span id=&quot;resumenEntrada&quot;&gt;&lt;/span&gt;&lt;/p&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;&lt;strong&gt;🍔 Hamburguesa:&lt;/strong&gt; &lt;**** id=&quot;resumenHamburguesa&quot;&gt;&lt;/span&gt;&lt;/p&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;&lt;strong&gt;🥤 Bebida:&lt;/strong&gt; &lt;span id=&quot;resumenBebida&quot;&gt;&lt;/span&gt;&lt;/p&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;&lt;strong&gt;📦 Cantidad:&lt;/strong&gt; &lt;span id=&quot;resumenCantidad&quot;&gt;&lt;/span&gt;&lt;/p&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;&lt;strong&gt;💰 Total a pagar:&lt;/strong&gt; &lt;span id=&quot;resumenTotal&quot; class=&quot;precio&quot;&gt;&lt;/span&gt;&lt;/p&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;button onclick=&quot;editarPedido()&quot;&gt;✏️ Editar pedido&lt;/button&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;****** onclick=&quot;finalizarPedido()&quot; style=&quot;background: linear-gradient(135deg, #ffd700, #ff8c00);&quot;&gt;✅ &iexcl;Hacer pedido!&lt;/button&gt;</p>
+<p>&nbsp; &nbsp; &lt;/div&gt;</p>
+<p><br></p>
+<p>&nbsp; &nbsp; &lt;script&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; const precios = {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Entradas</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; vegetales: 10000,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fruta: 10000,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; yogurt: 10000,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mixto: 12000,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; combo: 14000,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Hamburguesas de carne</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sencilla_asada: 10000,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sencilla_horno: 10000,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; desmechada: 10000,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; con_queso: 12000,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; queso_jamon: 14000,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Hamburguesas vegetarianas</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; lenteja: 14000,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; frijol: 15000,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; garbanzo: 15000,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mixta: 17000,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; lechuga: 16000,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Bebidas</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; te: 7100,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; limonada: 5100,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; jugo_agua: 6100,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; jugo_leche: 7120,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; granizado: 11500</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; };</p>
+<p><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; function validarFormulario() {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *** ****** = true;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.querySelectorAll(&apos;.error&apos;).forEach(***** =&gt; error.*********** = &apos;&apos;);</p>
+<p><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const nombre = document.getElementById(&apos;nombre&apos;).value.trim();</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (nombre.length &lt; 2) {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&apos;errorNombre&apos;).textContent = &apos;❌ El nombre debe ***** al ***** 2 caracteres&apos;;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; valido = false;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const ******** = document.getElementById(&apos;telefono&apos;).value.trim();</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (!/^\d{7,}$/.test(telefono)) {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&apos;errorTelefono&apos;).*********** = &apos;❌ ******* ** n&uacute;mero de tel&eacute;**** v&aacute;lido&apos;;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; valido = false;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ***** hamburguesa = document.getElementById(&apos;hamburguesa&apos;).value;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (!hamburguesa) {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&apos;errorHamburguesa&apos;).*********** = &apos;❌ Seleccione una hamburguesa&apos;;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ****** = false;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const cantidad = document.getElementById(&apos;cantidad&apos;).value;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (cantidad &lt; 1) {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&apos;errorCantidad&apos;).textContent = &apos;❌ ** cantidad **** ser al menos 1&apos;;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; valido = false;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return valido;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; function calcularTotal() {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const ******* = document.getElementById(&apos;entrada&apos;).value;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const hamburguesa = document.getElementById(&apos;hamburguesa&apos;).value;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const bebida = document.getElementById(&apos;bebida&apos;).value;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ***** ******** = parseInt(document.getElementById(&apos;cantidad&apos;).value);</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *** total = 0;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (entrada) total += precios[entrada];</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (hamburguesa) total += precios[hamburguesa];</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ** (bebida) total += precios[bebida];</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return (total * cantidad).toLocaleString(&apos;es-CO&apos;, { style: &apos;currency&apos;, currency: &apos;COP&apos; });</p>
+<div style="color: red">Prueba de Word a HTML - por favor <a href="https://wordtohtml.net/site/payment">Go PRO</a> para obtener el HTML completo.</div>
